@@ -1,13 +1,11 @@
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.*;
-import java.util.stream.IntStream;
-
 public class main {
-    public class linkedList {
+    public static void main (){
+
+    }
+    static public class linkedList {
         protected Node head;
         protected Node tail;
-        class Node{
+        static class Node{
             protected int number;
             protected Node nextNode;
             protected Node prevNote;
@@ -22,6 +20,18 @@ public class main {
                 node.nextNode = node.prevNote;
             }
         }
+            public void reverseListALT(){
+                Node current = head;
+                Node next = current.nextNode;
+                Node prev = current.prevNote;
+                current.nextNode = prev;
+                current.prevNote = next;
+                if (prev == null)
+                    tail = current;
+                if (next == null)
+                    head = current;
+                }
+        }
     }
-}
+
 
